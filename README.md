@@ -14,8 +14,8 @@ These software packages must be installed prior to using this repo:
 This describes how to run the demo code in this project:
 
 ```bash
-docker pull tagname
-docker run -it -p 8080:8080 tagname
+docker pull ghcr.io/avnes/pyrhout:latest
+docker run -d -p 8080:8080 ghcr.io/avnes/pyrhout:latest
 curl http://127.0.0.1:8080/
 ```
 
