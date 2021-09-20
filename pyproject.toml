@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "python-template-project"
+name = "pyrhout"
 version = "0.1.0"
 description = ""
-authors = ["Audun Nes <REDACTED>"]
+authors = ["Audun Nes"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-requests = "^2.25.1"
-types-requests = "^0.1.11"
+Flask = "^2.0.1"
+types-Flask = "^1.1.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

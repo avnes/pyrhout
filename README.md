@@ -1,35 +1,22 @@
-# Python Template Project
+# Python Request Headers Output
 
-This is an opinionated way to structure a Python project using a number of productivity tools:
-
-- Poetry from <https://python-poetry.org/>
-- Makefile from <https://www.gnu.org/software/make/manual/make.html>
-- pre-commit from <https://pre-commit.com/>
-- black from <https://github.com/psf/black>
-- flake8 from <https://github.com/pycqa/flake8>
-- bandit from <https://github.com/pycqa/bandit>
-- isort from <https://github.com/pycqa/isort>
-- pyenv from <https://github.com/pyenv/pyenv>
-- A test framework. In this project pytest and pytest-cov are used.
+Simple Flask app to dump all request headers. Useful for debugging.
 
 ## Requirements
 
 These software packages must be installed prior to using this repo:
 
 - Python
-- bash
-- curl
-- git
 - poetry
-- pyenv
 
 ## Usage
 
 This describes how to run the demo code in this project:
 
 ```bash
-make install
-make
+docker pull tagname
+docker run -it -p 8080:8080 tagname
+curl http://127.0.0.1:8080/
 ```
 
 ## Development
@@ -39,19 +26,13 @@ make
 ```bash
 poetry shell
 poetry install
+make
 ```
 
 ### Linter
 
 ```bash
 make lint
-```
-
-### Run tests
-
-```bash
-make test
-make coverage
 ```
 
 ### Install pre-commit hook
