@@ -1,6 +1,7 @@
 """Show request headers"""
 
 import flask
+from waitress import serve
 
 app = flask.Flask(__name__)
 
@@ -16,4 +17,6 @@ def index():
     return body
 
 
-app.run(host="127.0.0.1", port=8080)
+if __name__ == "__main__":
+    # Allow to listen on all interfaces. hardcoded_bind_all_interfaces
+    serve(app, host="0.0.0.0", port=8080)  # nosec

@@ -560,6 +560,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "types-waitress"
+version = "0.1.9"
+description = "Typing stubs for waitress"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "types-werkzeug"
 version = "1.0.5"
 description = "Typing stubs for Werkzeug"
@@ -595,6 +603,18 @@ docs = ["proselint (>=0.10.2)", "sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sp
 testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", "pytest (>=4)", "pytest-env (>=0.6.2)", "pytest-freezegun (>=0.4.1)", "pytest-mock (>=2)", "pytest-randomly (>=1)", "pytest-timeout (>=1)", "packaging (>=20.0)"]
 
 [[package]]
+name = "waitress"
+version = "2.0.0"
+description = "Waitress WSGI server"
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.extras]
+docs = ["Sphinx (>=1.8.1)", "docutils", "pylons-sphinx-themes (>=1.0.9)"]
+testing = ["pytest", "pytest-cover", "coverage (>=5.0)"]
+
+[[package]]
 name = "wcwidth"
 version = "0.2.5"
 description = "Measures the displayed width of unicode strings in a terminal"
@@ -624,7 +644,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "65ce610e85ef80c788b9620e21d0289666b8cdb26691f075cfc70d7344462872"
+content-hash = "18f8ac3fe006ee2f2bef2015d29619a2ddbb78d207585526740b309d3c443f6f"
 
 [metadata.files]
 astroid = [
@@ -1040,6 +1060,10 @@ types-markupsafe = [
     {file = "types-MarkupSafe-1.1.6.tar.gz", hash = "sha256:7014f5b578b419967c64ff65cb230636ec20c37b6e22e58a88969b1f78f029c4"},
     {file = "types_MarkupSafe-1.1.6-py3-none-any.whl", hash = "sha256:1dd3c3f6e913434282a37f847be51bf6d40117b16b6b2e84b79d568275f21784"},
 ]
+types-waitress = [
+    {file = "types-waitress-0.1.9.tar.gz", hash = "sha256:ad892e685e12feb9952d17cfb8e5068cab4bad9fc0acca5d7349c88b81df6e29"},
+    {file = "types_waitress-0.1.9-py3-none-any.whl", hash = "sha256:d82b5b1128c915beeede0806b2ad63b4463ee30420bbed8aaf7bbae9b31fdf68"},
+]
 types-werkzeug = [
     {file = "types-Werkzeug-1.0.5.tar.gz", hash = "sha256:f6216ab0e0211fe73ebdb4ae0e414113d4d8a2f783a15c2d8550e06d0fd8e7f9"},
     {file = "types_Werkzeug-1.0.5-py3-none-any.whl", hash = "sha256:428a07d828a2c3dc6979b2ef2a79345ab33c54e070d5af319c038e6ccdfd3387"},
@@ -1052,6 +1076,10 @@ typing-extensions = [
 virtualenv = [
     {file = "virtualenv-20.8.0-py2.py3-none-any.whl", hash = "sha256:a4b987ec31c3c9996cf1bc865332f967fe4a0512c41b39652d6224f696e69da5"},
     {file = "virtualenv-20.8.0.tar.gz", hash = "sha256:4da4ac43888e97de9cf4fdd870f48ed864bbfd133d2c46cbdec941fed4a25aef"},
+]
+waitress = [
+    {file = "waitress-2.0.0-py3-none-any.whl", hash = "sha256:29af5a53e9fb4e158f525367678b50053808ca6c21ba585754c77d790008c746"},
+    {file = "waitress-2.0.0.tar.gz", hash = "sha256:69e1f242c7f80273490d3403c3976f3ac3b26e289856936d1f620ed48f321897"},
 ]
 wcwidth = [
     {file = "wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784"},
