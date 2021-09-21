@@ -6,7 +6,7 @@ COPY . main.py sandbox/
 
 WORKDIR sandbox
 
-RUN apk update && apk add curl 
+RUN apk update && apk add curl
 
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 

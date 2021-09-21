@@ -1,5 +1,7 @@
 """Show request headers"""
 
+import json
+
 import flask
 from waitress import serve
 
@@ -10,11 +12,13 @@ app = flask.Flask(__name__)
 def index():
     """Show request headers on GET"""
     headers = flask.request.headers
-    body = ""
+    print(type(headers))
+    body: dict = {}
     for key, value in headers.items():
-        print(key, value)
-        body += f"{key}: {value}<br>"
-    return body
+        body[key] = value
+    return json.dumps(body, indent=2), {
+        "Content-Type": "application/json; charset=utf-8"
+    }
 
 
 if __name__ == "__main__":
