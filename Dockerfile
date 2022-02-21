@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.11.0a5-alpine
 
 COPY . pyproject.toml sandbox/
 COPY . poetry.lock sandbox/
