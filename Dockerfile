@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.10-slim-bullseye
 
 COPY . pyproject.toml sandbox/
 COPY . poetry.lock sandbox/
@@ -6,10 +6,10 @@ COPY . main.py sandbox/
 
 WORKDIR sandbox
 
-RUN apk update && apk add curl
+RUN apt update && apt install -y curl
 
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+RUN curl -sSL https://install.python-poetry.org | python3 -
 
-RUN . $HOME/.poetry/env && poetry install --no-dev
+RUN $HOME/.local/bin/poetry install --no-dev
 
-CMD . $HOME/.poetry/env && poetry run python main.py
+CMD $HOME/.local/bin/poetry run python main.py
