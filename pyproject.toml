@@ -8,7 +8,7 @@ authors = ["Audun Nes"]
 python = "^3.9"
 Flask = "^2.3.2"
 types-Flask = "^1.1.3"
-waitress = "^2.1.2"
+waitress = "^3.0.1"
 types-waitress = "^0.1.9"
 
 [tool.poetry.dev-dependencies]
